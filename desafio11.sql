@@ -1,1 +1,1 @@
-SELECT notes FROM purchase_orders WHERE RIGHT(notes, 2) BETWEEN 30 AND 39;
+SELECT purchase_orders.notes FROM purchase_orders LEFT JOIN order_details ON order_details.purchase_order_id = purchase_orders.id WHERE order_details.order_id BETWEEN 30 and 39;
